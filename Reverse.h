@@ -8,7 +8,7 @@ class Reverse
     private:
     int reversed=0;
     int i=0;
-   
+
     public:
     Reverse();
     int reverseDigit(int value);
