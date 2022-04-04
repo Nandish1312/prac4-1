@@ -5,9 +5,9 @@ Reverse::Reverse()
 {}
 string Reverse::reverseString(string letters)
 {
- size_t number_characters= letters.size();
+ size_t number_characters = letters.size();
 
-if(number_characters== 1)
+if(number_characters == 1)
 {
 return letters;
 }
@@ -25,8 +25,8 @@ if(value<10)
 {
 return value;
 }
-int len=0;
-for (int i=value; i; i/=10) len++;
+int number=0;
+for (int a=value; a; a/=10) number++;
 {
 return value%10*(int)pow(10, len-1) + reverseDigit(value/10);
 }
