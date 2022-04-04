@@ -1,17 +1,17 @@
+
 #ifndef REVERSE_H
 #define REVERSE_H
-#include <iostream>
 #include <string>
+#include <math.h>
 
+using namespace std;
 class Reverse
 {
-    private:
-    int reversed=0;
-    int i=0;
-
-    public:
-    Reverse();
-    int reverseDigit(int value);
-    std::string reverseString(std::string letters);
+public:
+Reverse();
+string reverseString(string letters);
+int reverseDigit(int value);
 };
+
+
 #endif
