@@ -28,6 +28,6 @@ return value;
 int number=0;
 for (int a=value; a; a/=10) number++;
 {
-return value%10*(int)pow(10, len-1) + reverseDigit(value/10);
+return value%10*(int)pow(10, num-1) + reverseDigit(value/10);
 }
 }
