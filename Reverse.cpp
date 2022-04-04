@@ -1,33 +1,45 @@
-#include "Reverse.h"
 #include <iostream>
+#include "Reverse.h"
+#include <string>
+#include <typeinfo>
 
-Reverse::Reverse()
-{}
-string Reverse::reverseString(string letters)
-{
- size_t number_characters = letters.size();
-
-if(number_characters == 1)
-{
-return letters;
-}
-else
-{
- return letters[number_characters- 1]+reverseString(letters.substr(0, number_characters- 1));
-}
-}
-
-
+Reverse::Reverse(){}
 
 int Reverse::reverseDigit(int value)
 {
-if(value<10) 
-{
-return value;
+
+    if(value>0)
+    {
+
+        int remainder=(value%10);
+        reversed=(reversed*10)+remainder;
+        reverseDigit(value/10);
+    }
+    else
+    return -1;
+    return reversed;
 }
-int number=0;
-for (int a=value; a; a/=10) number++;
+
+std::string Reverse::reverseString(std::string letters)
 {
-return value%10*(int)pow(10, num-1) + reverseDigit(value/10);
-}
+
+    int length_string=letters.length();
+    if (length_string==1)
+    {
+        return letters;
+    }
+    else if(i<(length_string/2))
+    {
+        char temp=letters[i];
+        letters[i]=letters[length_string-i-1];
+        letters[length_string-i-1]=temp;
+        i++;
+        //std::cout<<i<<" "<<letters<<" "<<std::endl;
+        letters=reverseString(letters);
+    }
+    //else if(typeof(letters)!=std::string)
+    //{return "ERROR";}
+
+
+    return letters;
 }
